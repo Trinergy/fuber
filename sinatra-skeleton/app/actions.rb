@@ -5,7 +5,6 @@ require_relative 'order_actions'
 ####GETS######
 ##############
 get '/' do
-
   erb :index
 end
 
