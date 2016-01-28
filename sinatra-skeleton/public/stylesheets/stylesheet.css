@@ -1,0 +1,31 @@
+body {
+  background: url(../img/restaurant_icons.png);
+}
+
+.headline {
+  margin-top: 130px;
+  margin-left: 75px;
+}
+
+.headline, h1 {
+  font-size: 60px;
+  color: #00000F;
+}
+
+.order {
+  margin-top: 180px;
+  float: left;
+  margin-left: 25%;
+}
+
+.delivery {
+  margin-top: 180px;
+  float: right;
+  margin-right: 25%;
+}
+
+.btn-primary {
+  width: 200px;
+  height: 100px;
+  font-size: 35px;
+}
