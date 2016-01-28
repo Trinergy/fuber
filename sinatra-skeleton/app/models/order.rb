@@ -15,5 +15,4 @@ class Order < ActiveRecord::Base
     errors.add(:delivery_date, "can't be in the past") if
       !delivery_date.blank? and delivery_date < Date.today
   end
-
 end
