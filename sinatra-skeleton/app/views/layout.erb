@@ -16,12 +16,18 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <a class="navbar-brand" href="#">Fuber</a>
+        <a class="navbar-brand" href="/">Fuber</a>
       </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="">Order</a></li>
-          <li><a href="">Deliever</a></li>
-          <li><a href="">Sign in</a></li>
+          <li><a href="/orders/menu">Order</a></li>
+          <li><a href="/orders">Deliver</a></li>
+          <% if current_user.nil? %>
+          <li><a href="/session/new">Sign in</a></li>
+          <% end %>
+          <% if current_user %>
+          <li><a href="/user"><%= current_user.username %></a></li>
+          <li><a href="/session/signout">Sign Out</a></li>
+          <% end %>
         </ul>
       </div>
       <div class="navbar-collapse collapse">

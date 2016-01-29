@@ -4,7 +4,11 @@ require_relative 'order_actions'
 helpers do
   
   def current_user
-    @current_user ||= User.find(session[:user_id])
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    else
+      @current_user = nil
+    end
   end
 
 end
@@ -17,12 +21,21 @@ get '/' do
 end
 
 get '/user' do
-
+  @order_history = Order.orderer_history(current_user.id)
+  @deliver_history = Order.deliverer_history(current_user.id)
+  @pending_orders = Order.pending_orders(current_user.id)
+  @being_delivered = Order.being_delivered_orders(current_user.id)
+  @pending_deliveries = Order.pending_deliveries(current_user.id)
   erb :user
 end
 
 get '/session/new' do
   erb :'session/new'
+end
+
+get '/session/signout' do
+  session.clear
+  redirect '/'
 end
 
 ##############
