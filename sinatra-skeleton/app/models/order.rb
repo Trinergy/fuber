@@ -9,10 +9,30 @@ class Order < ActiveRecord::Base
   validates :destination, presence: true
   validates :price, numericality: { only_integer: true }
   
-  validate :expiration_date_cannot_be_in_the_past
+  # validate :delivery_date_cannot_be_in_the_past
 
-  def expiration_date_cannot_be_in_the_past
-    errors.add(:delivery_date, "can't be in the past") if
-      !delivery_date.blank? and delivery_date < Date.today
+  # def delivery_date_cannot_be_in_the_past
+  #   errors.add(:delivery_date, "can't be in the past") if
+  #     !delivery_date.blank? and delivery_date < Date.today
+  # end
+
+  def self.orderer_history(id)
+    Order.where('orderer_id = ?', id).where('delivery_status = 3').order(created_at: :desc)
+  end
+
+  def self.deliverer_history(id)
+    Order.where('deliverer_id = ?', id).where('delivery_status = 3').order(created_at: :desc)
+  end
+
+  def self.pending_orders(id)
+    Order.where('orderer_id =?', id).where('delivery_status = 1').order(created_at: :desc)
+  end
+
+  def self.being_delivered_orders(id)
+    Order.where('orderer_id =?', id).where('delivery_status = 2').order(created_at: :desc)
+  end
+
+  def self.pending_deliveries(id)
+    Order.where('deliverer_id =?', id).where('delivery_status = 2').order(created_at: :desc)
   end
 end

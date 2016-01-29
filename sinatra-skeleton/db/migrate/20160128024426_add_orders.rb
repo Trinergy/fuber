@@ -4,7 +4,7 @@ class AddOrders < ActiveRecord::Migration
       t.string :cuisine
       t.string :destination
       t.date :delivery_date
-      t.time :delivery_time
+      t.datetime :delivery_time
       t.integer :price
       t.string :comment
       t.references :orderer

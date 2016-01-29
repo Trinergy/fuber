@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160128024426) do
     t.string   "cuisine"
     t.string   "destination"
     t.date     "delivery_date"
-    t.time     "delivery_time"
+    t.datetime "delivery_time"
     t.integer  "price"
     t.string   "comment"
     t.integer  "orderer_id"
