@@ -4,8 +4,9 @@ body {
 }
 .sidebar-nav { 
   width: 100%;
-  background-color: #E0E0E0;
+  background-color: #EEEEEE;
   border-radius: 3px;
+  padding-left: 10px;
   }
 
 .headline {
