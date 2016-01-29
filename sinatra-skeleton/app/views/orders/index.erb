@@ -3,7 +3,7 @@
       <% @pending_orders.each do |order| %>
 <div class = "container">
    <div class = "jumbotron1">
-      <h3><%= @user.find(order.orderer_id).username %></h2>
+      <h3><%= @user.find(order.orderer_id).username %> <small><%= @user.find(order.orderer_id).rating %></small></h2>
       <div class = "jumbotron" id="card">
         <img class="food-icon"src="../../img/Africanalter.jpg">
         <ul class="card-data-left">
