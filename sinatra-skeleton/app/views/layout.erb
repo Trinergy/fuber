@@ -4,6 +4,7 @@
 
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="/stylesheets/stylesheet.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
 
@@ -11,21 +12,27 @@
 </head>
 <body>
   <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
+<!--     <div class="container"> -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <a class="navbar-brand" href="#">Fuber</a>
+        <a class="navbar-brand" href="#">F&uuml;ber</a>
       </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="">Order</a></li>
-          <li><a href="">Deliever</a></li>
-          <li><a href="">Sign in</a></li>
+          <li><a href="/orders/menu">Order</a></li>
+          <li><a href="/orders">Deliver</a></li>
+          <% if current_user.nil? %>
+          <li><a href="/session/new">Sign in</a></li>
+          <% end %>
+          <% if current_user %>
+          <li><a href="/user"><%= current_user.username %></a></li>
+          <li><a href="/session/signout">Sign Out</a></li>
+          <% end %>
         </ul>
       </div>
       <div class="navbar-collapse collapse">
-    </div>
+   <!--  </div> -->
   </div>
   <%= yield %>
 </body>
