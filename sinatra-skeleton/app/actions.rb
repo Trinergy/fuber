@@ -19,6 +19,11 @@ helpers do
     end
   end
 
+  def cuisine_options_filter(selected_cuisine)
+    options = ['African', 'Burger', 'Greek', 'Mexican', 'Pizza', 'Seafood', 'Sushi', 'Thai']
+    options.delete_if{|option| option == selected_cuisine}
+  end
+
 end
 
 ##############
@@ -33,7 +38,7 @@ get '/user' do
   @user = User.all
   @order_history = Order.orderer_history(current_user.id)
   @deliver_history = Order.deliverer_history(current_user.id)
-  @pending_orders = Order.pending_orders(current_user.id)
+  @pending_orders = Order.user_pending_orders(current_user.id)
   @being_delivered = Order.being_delivered_orders(current_user.id)
   @pending_deliveries = Order.pending_deliveries(current_user.id)
   erb :user

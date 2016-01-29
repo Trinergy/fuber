@@ -35,16 +35,13 @@ body {
 
 .buttons {
   white-space: nowrap;
-  width: 50%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
-  padding: 10px 0px 10px 15px;
-  border-radius: 5px;
+  margin-top: 150px;
+  width: 100%;
 }
 
 .buttons button {
-  margin: 0px 20px 0px 0px;
   background-color: #d4bf5e;
   border: 2px solid #796920;
   font-family: leagueGothic, sans-serif;
@@ -213,4 +210,36 @@ body {
   color:#b69d30;
   font-size: 4em;
   text-align: center;
+}
+
+.accept {
+  position: absolute;
+}
+
+#accept {
+  margin-top: 15px;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.arrow {
+  width: 60px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#left-button {
+  float: left;
+  margin-left: 300px;
+}
+
+#right-button {
+  float: right;
+  margin-right: 300px;
 }
