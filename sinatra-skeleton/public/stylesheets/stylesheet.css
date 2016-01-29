@@ -2,6 +2,11 @@ body {
   background: url(../img/restaurant_icons.png);
 
 }
+.sidebar-nav { 
+  width: 100%;
+  background-color: #E0E0E0;
+  border-radius: 3px;
+  }
 
 .headline {
   margin-top: 130px;
