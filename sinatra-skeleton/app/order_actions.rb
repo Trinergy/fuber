@@ -8,7 +8,8 @@ get '/orders/menu' do
 end
 
 get '/orders/new' do
-
+  @selected_cuisine = params[:cuisine]
+  @cuisine_options = cuisine_options_filter(@selected_cuisine)
   erb :'orders/new'
 end
 
