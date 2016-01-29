@@ -27,6 +27,6 @@ end
 ####ORDER POSTS#####
 ####################
 
-post '/orders'
+post '/orders' do
 
 end

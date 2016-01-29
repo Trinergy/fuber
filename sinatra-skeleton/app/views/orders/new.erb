@@ -1,1 +1,50 @@
-new
+<div class="container">
+  <form class="form-horizontal" method="post" action="/orders">
+    <div class="form-group">
+      <div class="col-xs-3">
+        <label><h3>Cuisine</h3></label>
+        <p><select class="form-control">
+          <option value="pizza">Pizza</option>
+          <option value="african">African</option>
+          <option value="burger">Burger</option>
+          <option value="greek">Greek</option>
+          <option value="ice_cream">Ice Cream</option>
+          <option value="mexican">Mexican</option>
+          <option value="seafood">Seafood</option>
+          <option value="sushi">Sushi</option>
+          <option value="thai">Thai</option>
+        </select></p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-xs-3">
+      <label><h3>Price Range</h3></label>
+        <p><select class="form-control">
+          <option value="10">$10</option>
+          <option value="15">$15</option>
+          <option value="20">$20</option>
+        </select></p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-xs-3">
+        <label><h3>Drinks + Options</h3></label>
+        <p><input type="radio" name="drink" value="drink_yes">Add Drink (+$2.00)
+        <input type="radio" name="drink" value="drink_no"> No Drink</p> 
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-xs-5">
+        <label><h3>Deliver To:</h3></label>
+        <p><input class="form-control input-lg" type="text" name="address"></p>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+
