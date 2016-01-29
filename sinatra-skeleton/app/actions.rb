@@ -30,6 +30,7 @@ get '/' do
 end
 
 get '/user' do
+  @user = User.all
   @order_history = Order.orderer_history(current_user.id)
   @deliver_history = Order.deliverer_history(current_user.id)
   @pending_orders = Order.pending_orders(current_user.id)
