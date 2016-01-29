@@ -14,7 +14,8 @@ get '/orders/new' do
 end
 
 get '/orders' do 
-
+  @user = User.all
+  @pending_orders = Order.not_user_pending_orders(current_user.id) if current_user
   erb :'orders/index'
 end
 

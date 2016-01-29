@@ -24,8 +24,12 @@ class Order < ActiveRecord::Base
     Order.where('deliverer_id = ?', id).where('delivery_status = 3').order(created_at: :desc)
   end
 
-  def self.pending_orders(id)
-    Order.where('orderer_id =?', id).where('delivery_status = 1').order(created_at: :desc)
+  def self.user_pending_orders(id)
+    Order.where('orderer_id = ?', id).where('delivery_status = 1').order(created_at: :desc)
+  end
+
+  def self.not_user_pending_orders(id)
+    Order.where('orderer_id != ?', id).where('delivery_status = 1').order(created_at: :desc)
   end
 
   def self.being_delivered_orders(id)
