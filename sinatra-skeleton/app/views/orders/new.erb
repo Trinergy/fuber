@@ -1,57 +1,64 @@
-<div class="container">
-  <form class="form-horizontal" method="post" action="/orders">
-    <div class="form-group">
-      <div class="col-xs-3">
-        <label><h3>Cuisine</h3></label>
-        <p><select class="form-control">
-          <option value="pizza">Pizza</option>
-          <option value="african">African</option>
-          <option value="burger">Burger</option>
-          <option value="greek">Greek</option>
-          <option value="ice_cream">Ice Cream</option>
-          <option value="mexican">Mexican</option>
-          <option value="seafood">Seafood</option>
-          <option value="sushi">Sushi</option>
-          <option value="thai">Thai</option>
-        </select></p>
-      </div>
-    </div>
+<div class="row">
 
-    <div class="form-group">
-      <div class="col-xs-3">
-      <label><h3>Price Range</h3></label>
-        <p><select class="form-control">
-          <option value="10">$10</option>
-          <option value="15">$15</option>
-          <option value="20">$20</option>
-        </select></p>
-      </div>
-    </div>
+  <div class="col-xs-4 col-xs-offset-4">
 
-    <div class="form-group">
-      <div class="col-xs-3">
-        <label><h3>Drinks + Options</h3></label>
-        <p><input type="radio" name="drink" value="drink_yes">Add Drink (+$2.00)
-        <input type="radio" name="drink" value="drink_no"> No Drink</p> 
-      </div>
-    </div>
+    <h2 id="form_title">ORDER</h2>
 
-    <div class="form-group">
-      <div class="col-xs-5">
-        <label><h3>Deliver To:</h3></label>
-        <p><input class="form-control input-lg" type="text" name="address"></p>
-      </div>
-    </div>
+    <form class="form-horizontal" method="post" action="/orders">
 
-    <div class="form-group">
-      <div class="col-xs-5">
-        <label><h3>Comments</h3></label>
-        <p><textarea class="form-control" rows="5" name="textarea"></textarea></p>
-      </div>
-    </div>
+        <div class="right-inner-addon">
+          <i class="glyphicon glyphicon-cutlery"></i>
+            <select class="form-control">
+                <option selected="selected">Select a cuisine option</option>
+                <option value="pizza">Pizza</option>
+                <option value="african">African</option>
+                <option value="burger">Burger</option>
+                <option value="greek">Greek</option>
+                <option value="ice_cream">Ice Cream</option>
+                <option value="mexican">Mexican</option>
+                <option value="seafood">Seafood</option>
+                <option value="sushi">Sushi</option>
+                <option value="thai">Thai</option>
+              </select>
+        </div>
 
-  </form>
+        <div class="right-inner-addon">
+          <i class="glyphicon glyphicon-piggy-bank"></i>
+            <select class="form-control">
+              <option value="10">$10</option>
+              <option value="15">$15</option>
+              <option value="20">$20</option>
+            </select>
+        </div>
+
+        <div class="right-inner-addon">
+          <i class="glyphicon glyphicon-plus-sign"></i>
+          <select class="form-control">
+            <option value="soft_drink">Add soft drink +$2</option>
+            <option value="beer">Add beer +$5</option>
+          </select>
+        </div>
+
+        <div class="right-inner-addon">
+          <i class="glyphicon glyphicon-home"></i>
+          <input type="text"
+                 class="form-control" 
+                 placeholder="Delivery Address" />
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Use default address
+          </label>
+        </div>
+
+        <div class="right-inner-addon">
+          <i class="glyphicon glyphicon-comment" style="whitespace: nowrap"></i>
+          <textarea class="form-control" rows="5" name="comments" placeholder="Please enter delivery instructions or allergies."></textarea>
+        </div>
+
+    </form>
+
+  </div>
+
 </div>
-
-
-
