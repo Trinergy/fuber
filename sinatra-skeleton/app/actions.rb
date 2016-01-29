@@ -19,6 +19,11 @@ helpers do
     end
   end
 
+  def cuisine_options_filter(selected_cuisine)
+    options = ['African', 'Burger', 'Greek', 'Mexican', 'Pizza', 'Seafood', 'Sushi', 'Thai']
+    options.delete_if{|option| option == selected_cuisine}
+  end
+
 end
 
 ##############
