@@ -80,13 +80,25 @@ body {
   }
 
 .headline {
-  margin-top: 130px;
+  margin-top: 70px;
   margin-left: 75px;
 }
 
 .headline, h1 {
   font-size: 60px;
   color: #00000F;
+}
+
+.order {
+  margin-top: 200px;
+  float: left;
+  margin-left: 25%;
+}
+
+.delivery {
+  margin-top: 200px;
+  float: right;
+  margin-right: 25%;
 }
 
 .btn-primary {
@@ -109,4 +121,30 @@ body {
 
 .img-thumbnail:hover {
   opacity: 1.0;
+}
+
+#card {
+  border: black solid 2.5px;
+}
+
+.food-icon {
+  border: black solid 2.5px;
+  width: 170px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card-data-right {
+  font-size: 21px;
+  float: right;
+  height: 170px;
+  width: 250px;
+  word-wrap: break-word;
+}
+
+.card-data-left {
+  font-size: 20px;
+  display: inline-block;
+  list-style-type: none;
+  position: absolute;
 }
