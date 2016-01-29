@@ -8,15 +8,6 @@ body {
 
 }
 
-#form_title {
-
-  font-family: leagueGothic, sans-serif;
-  color:#b69d30;
-  font-size: 4em;
-  text-align: center;
-
-}
-
 #welcome {
   background: url(../img/burned_map.jpg);
   height: 550px;
@@ -155,12 +146,14 @@ body {
   display: inline-block;
   list-style-type: none;
   position: absolute;
+}
 
 /*Form styling*/
 
 .left-inner-addon {
-    position: relative;
+  position: relative;
 }
+
 .left-inner-addon input {
     padding-left: 30px;    
 }
@@ -195,4 +188,29 @@ body {
 
 .checkbox {
   margin: 0.5em 0em 0em 0.5em;
+}
+
+.buttonHolder {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.btn-info {
+  font-family: leagueGothic, sans-serif;
+  background-color:#b69d30;
+  border: none;
+  font-size: 1.5em;
+  margin: 0 auto;
+  display: inline;
+}
+
+.btn-info:hover {
+  background-color: #796920;
+}
+
+#form_title {
+  font-family: leagueGothic, sans-serif;
+  color:#b69d30;
+  font-size: 4em;
+  text-align: center;
 }
