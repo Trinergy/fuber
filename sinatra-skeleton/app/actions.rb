@@ -4,7 +4,11 @@ require_relative 'order_actions'
 helpers do
   
   def current_user
-    @current_user ||= User.find(session[:user_id])
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    else
+      @current_user = nil
+    end
   end
 
 end
@@ -27,6 +31,11 @@ end
 
 get '/session/new' do
   erb :'session/new'
+end
+
+get '/session/signout' do
+  session.clear
+  redirect '/'
 end
 
 ##############
