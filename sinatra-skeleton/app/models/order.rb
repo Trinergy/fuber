@@ -16,6 +16,13 @@ class Order < ActiveRecord::Base
   #     !delivery_date.blank? and delivery_date < Date.today
   # end
 
+  def self.process_delivery(order_id, deliverer_id)
+    order = find(order_id)
+    order.deliverer_id = deliverer_id
+    order.delivery_status = 2
+    order.save
+  end
+
   def self.orderer_history(id)
     Order.where('orderer_id = ?', id).where('delivery_status = 3').order(created_at: :desc)
   end
