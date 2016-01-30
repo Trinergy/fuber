@@ -8,6 +8,18 @@ body {
 
 }
 
+.panel-default > .panel-heading {
+  color: black;
+  background-color: rgba(212,191,94,0.7);
+  border: none;
+  height: 4em;
+}
+
+.panel-default > .panel-heading > h3 {
+  font-size: 2em;
+
+}
+
 #welcome {
   background: url(../img/burned_map.jpg);
   height: 550px;
