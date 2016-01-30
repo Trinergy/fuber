@@ -1,6 +1,4 @@
-  
 <div class="container" id="welcome">
-
   <div class="headline" id="greeting">
     <h1>Welcome to F&uuml;ber</h1>
     <h4><%= @tagline %></h4>
@@ -13,5 +11,43 @@
 
 </div>
 <div class ="arrow">
-  <img src="../../img/scrolldown.png">
+  <a href="#about" rel="m_PageScroll2id"><img class="arrowimg" src="../../img/scrolldown.png"></a>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" id="about">
+  <div class="headline" id="aboutgreeting">
+    <h1>About us</h1>
+    <h4>Say Hi to the guys</h4>
+  </div>
+</div>
+<div id="service">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-md-4">
+          <h2>Hey, I just met you</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>And this is tasty</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Here's my F&uuml;ber, rate me baby!</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>            
+      </div>
+    </div>
+   </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/javascript/jquery.malihu.PageScroll2id.js"></script>
+<script type="text/javascript">
+  $(function() {
+      $("a[rel='m_PageScroll2id']").mPageScroll2id();
+  });
+</script>
+
+

@@ -20,8 +20,14 @@ get '/orders' do
 end
 
 get '/orders/:order_id' do 
-
+  @user = User.all
+  @order = Order.find(params[:order_id])
   erb :'orders/show'
+end
+
+get '/orders/:order_id/deliver' do
+  Order.process_delivery(params[:order_id], current_user.id)
+  redirect '/orders'
 end
 
 
@@ -30,5 +36,14 @@ end
 ####################
 
 post '/orders' do
-  
+  Order.new(cuisine: params[:cuisine], 
+            price: params[:price], 
+            delivery_date: params[:date], 
+            delivery_time: params[:date] + ' ' + params[:time] + ':00', 
+            destination: params[:destination], 
+            comment: params[:comments],
+            orderer_id: current_user.id,
+            delivery_status: 1
+            ).save
+  redirect '/user'
 end
