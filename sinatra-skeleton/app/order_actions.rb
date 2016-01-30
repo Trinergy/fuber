@@ -20,7 +20,8 @@ get '/orders' do
 end
 
 get '/orders/:order_id' do 
-
+  @user = User.all
+  @order = Order.find(params[:order_id])
   erb :'orders/show'
 end
 
@@ -30,7 +31,5 @@ end
 ####################
 
 post '/orders' do
-  binding.pry
-
-  erb :user
+  redirect '/user'
 end

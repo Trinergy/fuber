@@ -36,7 +36,7 @@
 
         <div class="right-inner-addon">
           <i class="glyphicon glyphicon-home"></i>
-          <input name="address"
+          <input name="destination"
                  type="text"
                  class="form-control" 
                  placeholder="Delivery Address" />
@@ -44,7 +44,7 @@
 
         <div class="checkbox">
           <label>
-            <input name="address" type="checkbox" value="1"> Use default address
+            <input name="destination" type="checkbox" value="<%= current_user.address %>"> Use default address
           </label>
         </div>
 
