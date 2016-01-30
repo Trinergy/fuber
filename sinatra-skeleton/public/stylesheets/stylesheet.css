@@ -282,7 +282,9 @@ body {
   background: url(../img/fotorcreated.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 450px;
+  height: 400px;
+  border: solid black 1.5px;
+  border-radius: 2px;
 }
 
 #about h1 {
@@ -291,11 +293,11 @@ body {
 
 #aboutgreeting {
     white-space: nowrap;
-    width: 300px;
+    width: 350px;
     background-color: rgba(0,0,0,0.7);
     padding: 10px 0px 10px 15px;
     border-radius: 5px;
-    margin-top: 265px;
+    margin-top: 225px;
   }
 
   .btn-success {
