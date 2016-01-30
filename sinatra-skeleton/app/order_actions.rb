@@ -31,5 +31,6 @@ end
 ####################
 
 post '/orders' do
+  binding.pry
   redirect '/user'
 end
