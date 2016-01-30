@@ -4,7 +4,7 @@ class OrderImporter
     puts "adding orders..."
     Order.transaction do
       #order that has already been delivered
-      Order.create(cuisine: "Chinese", 
+      Order.create(cuisine: "Thai", 
                    destination: "0897 laser street",
                    delivery_date: "2016-01-01",
                    delivery_time: "2016-01-01 15:23:00",
@@ -85,7 +85,7 @@ class OrderImporter
                    comment: "Avoid the evil monkey",
                    orderer_id: 1,
                    delivery_status: 1)
-      Order.create(cuisine: "Italian", 
+      Order.create(cuisine: "Pizza", 
                    destination: "5876 chaser street",
                    delivery_date: "2016-02-01",
                    delivery_time: "2016-02-01 16:23:00",
@@ -101,7 +101,7 @@ class OrderImporter
                    comment: "allergy allergies",
                    orderer_id: 2,
                    delivery_status: 1)
-      Order.create(cuisine: "French", 
+      Order.create(cuisine: "Mexican", 
                    destination: "2048 fraser street",
                    delivery_date: "2016-02-02",
                    delivery_time: "2016-02-02 18:23:00",
@@ -111,7 +111,7 @@ class OrderImporter
                    delivery_status: 1)
 
       #order that is being delivered
-      Order.create(cuisine: "Chinese", 
+      Order.create(cuisine: "Seafood", 
                    destination: "6742 laser street",
                    delivery_date: "2016-01-31",
                    delivery_time: "2016-01-31 15:23:22",
@@ -129,7 +129,7 @@ class OrderImporter
                    orderer_id: 1,
                    deliverer_id: 3,
                    delivery_status: 2)
-      Order.create(cuisine: "Chinese", 
+      Order.create(cuisine: "Burger", 
                    destination: "4576 turkey street",
                    delivery_date: "2016-02-01",
                    delivery_time: "2016-02-01 08:23:22",
@@ -138,7 +138,7 @@ class OrderImporter
                    orderer_id: 1,
                    deliverer_id: 3,
                    delivery_status: 2)
-      Order.create(cuisine: "Chinese", 
+      Order.create(cuisine: "Mexican", 
                    destination: "8465 tiny street",
                    delivery_date: "2016-02-01",
                    delivery_time: "2016-02-01 15:23:22",
