@@ -3,9 +3,18 @@
     src: url(../fonts/leaguegothic.woff);
 }
 
+@font-face {
+    font-family: Walsheim;
+    src: url(../fonts/walsheim.woff);
+}
+
 body {
   background: url(../img/restaurant_icons.png);
+  font-family: 'Walsheim', sans-serif;
+}
 
+.card_link:hover {
+  text-decoration: none;
 }
 
 .panel-default > .panel-heading {
@@ -45,13 +54,13 @@ body {
   border-radius: 5px;
 }
 
-.buttons {
+/*.buttons {
   white-space: nowrap;
   margin-right: auto;
   margin-left: auto;
   margin-top: 150px;
   width: 100%;
-}
+}*/
 
 .buttons button {
   background-color: #d4bf5e;
