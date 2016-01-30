@@ -226,8 +226,14 @@ body {
 .arrow {
   width: 60px;
   margin: auto;
-  margin-bottom: 50px;
+  margin-top: -60px;
 }
+
+.arrowimg {
+  width: 60px;
+}
+
+
 
 .buttons {
   margin-left: auto;
@@ -243,3 +249,23 @@ body {
   float: right;
   margin-right: 300px;
 }
+
+#about {
+  background: url(../img/fotorcreated.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+
+#about h1 {
+  color: white;
+}
+
+#aboutgreeting {
+    white-space: nowrap;
+    width: 300px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 0px 10px 15px;
+    border-radius: 5px;
+    margin-top: 265px;
+  }
