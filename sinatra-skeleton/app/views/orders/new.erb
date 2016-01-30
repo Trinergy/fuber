@@ -8,23 +8,17 @@
 
         <div class="right-inner-addon">
           <i class="glyphicon glyphicon-cutlery"></i>
-            <select class="form-control">
-                <option selected="selected">Select a cuisine option</option>
-                <option value="pizza">Pizza</option>
-                <option value="african">African</option>
-                <option value="burger">Burger</option>
-                <option value="greek">Greek</option>
-                <option value="ice_cream">Ice Cream</option>
-                <option value="mexican">Mexican</option>
-                <option value="seafood">Seafood</option>
-                <option value="sushi">Sushi</option>
-                <option value="thai">Thai</option>
+            <select name="cuisine" class="form-control">
+                <option selected="selected"><%= @selected_cuisine %></option>
+                <% @cuisine_options.each do |option|%>
+                <option value="<%= option %>"><%= option %></option>
+                <% end %>
               </select>
         </div>
 
         <div class="right-inner-addon">
           <i class="glyphicon glyphicon-piggy-bank"></i>
-            <select class="form-control">
+            <select name="price" class="form-control">
               <option value="10">$10</option>
               <option value="15">$15</option>
               <option value="20">$20</option>
@@ -33,7 +27,7 @@
 
         <div class="right-inner-addon">
           <i class="glyphicon glyphicon-plus-sign"></i>
-          <select class="form-control">
+          <select name="drink" class="form-control">
             <option value="soft_drink">Add soft drink +$2</option>
             <option value="beer">Add beer +$5</option>
             <option value="beer">No drink</option>
@@ -42,14 +36,15 @@
 
         <div class="right-inner-addon">
           <i class="glyphicon glyphicon-home"></i>
-          <input type="text"
+          <input name="address"
+                 type="text"
                  class="form-control" 
                  placeholder="Delivery Address" />
         </div>
 
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Use default address
+            <input name="address" type="checkbox" value="1"> Use default address
           </label>
         </div>
 

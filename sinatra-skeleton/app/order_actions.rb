@@ -30,5 +30,7 @@ end
 ####################
 
 post '/orders' do
-  
+  binding.pry
+
+  erb :user
 end
