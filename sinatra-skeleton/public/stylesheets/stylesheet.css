@@ -276,3 +276,12 @@ body {
     border-radius: 5px;
     margin-top: 265px;
   }
+
+  .btn-success {
+    border-radius: 3px;
+    font-size: 17px;
+    margin-top: 13px;
+    height: 30px;
+    width: 170px;
+
+  }
