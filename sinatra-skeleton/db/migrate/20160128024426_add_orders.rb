@@ -9,7 +9,7 @@ class AddOrders < ActiveRecord::Migration
       t.string :comment
       t.references :orderer
       t.references :deliverer
-      t.decimal :rating
+      t.float :rating
       t.integer :delivery_status, default: 0
       t.timestamps null: false
     end

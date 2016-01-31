@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160128024426) do
     t.string   "comment"
     t.integer  "orderer_id"
     t.integer  "deliverer_id"
-    t.decimal  "rating"
+    t.float    "rating"
     t.integer  "delivery_status", default: 0
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160128024426) do
     t.string   "last_name"
     t.string   "password"
     t.string   "address"
-    t.decimal  "rating"
+    t.float    "rating"
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

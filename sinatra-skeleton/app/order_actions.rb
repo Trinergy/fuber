@@ -59,7 +59,7 @@ post '/orders/:order_id/rate' do
   @order.rating = params[:rating]
   @order.save
   @user = User.find(@order.deliverer_id)
-  @user.rating = Order.where('deliverer_id = ?', @order.deliverer_id).average(:rating).to_i
+  @user.rating = Order.where('deliverer_id = ?', @order.deliverer_id).average(:rating).to_f
   @user.save
   redirect :user
 end

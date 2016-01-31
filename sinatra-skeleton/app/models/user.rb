@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :password, presence: true
   validates :address, presence: true
-  validates :rating, numericality: { only_integer: true }
   validates :email, presence: true
 
   def self.update_user_rating(id)
