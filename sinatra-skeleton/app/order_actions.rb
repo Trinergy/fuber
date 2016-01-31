@@ -8,9 +8,14 @@ get '/orders/menu' do
 end
 
 get '/orders/new' do
-  @selected_cuisine = params[:cuisine]
-  @cuisine_options = cuisine_options_filter(@selected_cuisine)
-  erb :'orders/new'
+  if current_user.nil?
+    session[:message] = "Sign the *redacted* up, *redacted*"
+    redirect '/'
+  else
+    @selected_cuisine = params[:cuisine]
+    @cuisine_options = cuisine_options_filter(@selected_cuisine)
+    erb :'orders/new'
+  end
 end
 
 get '/orders' do 
@@ -46,4 +51,16 @@ post '/orders' do
             delivery_status: 1
             ).save
   redirect '/user'
+end
+
+post '/orders/:order_id/rate' do
+  @user = User.all
+  @order = Order.find(params[:order_id])
+  @order.rating = params[:rating]
+  @order.save
+  @user = User.find(@order.deliverer_id)
+  @user.rating = Order.where('deliverer_id = ?', @order.deliverer_id).average(:rating).to_i
+  @user.save
+  binding.pry
+  redirect :user
 end
