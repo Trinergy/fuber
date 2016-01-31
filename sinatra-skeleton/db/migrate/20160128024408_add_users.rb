@@ -6,7 +6,7 @@ class AddUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :password
       t.string :address
-      t.decimal :rating
+      t.float :rating
       t.string :email
       t.timestamps null: false
     end
