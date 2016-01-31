@@ -1,17 +1,104 @@
+/*GENERAL STYLING*/
+
 @font-face {
-    font-family: leagueGothic;
-    src: url(../fonts/leaguegothic.woff);
+  font-family: leagueGothic;
+  src: url(../fonts/leaguegothic.woff);
 }
 
 @font-face {
-    font-family: Walsheim;
-    src: url(../fonts/walsheim.woff);
+  font-family: Walsheim;
+  src: url(../fonts/walsheim.woff);
 }
 
 body {
   background: url(../img/restaurant_icons.png);
   font-family: 'Walsheim', sans-serif;
 }
+
+/*NAVIGATION STYLING*/
+
+#navbar-brand {
+  font-family: 'Geo', sans-serif;
+  font-size: 2.5em;
+  margin-left: 10px;
+  color: #777;
+  text-decoration: none;
+}
+
+#navbar-brand:hover {
+  color: black;
+}
+
+.navbar-right {
+  margin-right: 40px;
+}
+
+.headline {
+  margin-top: 70px;
+  margin-left: 75px;
+}
+
+.headline h1 {
+  font-size: 60px;
+  color: #00000F;
+}
+
+/*INDEX PAGE STYLING*/
+
+.arrow {
+  width: 60px;
+  margin: auto;
+  margin-top: -60px;
+}
+
+.arrowimg {
+  width: 60px;
+}
+
+.btn.btn-primary {
+
+  background-color: #d4bf5e;
+  border: 2px solid #796920;
+  font-family: leagueGothic, sans-serif;
+  font-size: 3.5em;
+  width: 200px;
+  height: 100px;
+}
+
+.btn.btn-primary:hover {
+  background-color: #b69d30;
+  border: 2px solid #796920;
+}
+
+.btn.btn-primary:last-child {
+  margin-left:30px;
+}
+
+.btn-group {
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+#greeting {
+  white-space: nowrap;
+  width: 560px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 0px 10px 15px;
+  border-radius: 5px;
+}
+
+#welcome {
+  background: url(../img/burned_map.jpg);
+  height: 550px;
+}
+
+#welcome h1, h4 {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+/*USER PAGE STYLING*/
 
 .card_link:hover {
   text-decoration: none;
@@ -26,74 +113,6 @@ body {
 
 .panel-default > .panel-heading > h3 {
   font-size: 2em;
-
-}
-
-#welcome {
-  background: url(../img/burned_map.jpg);
-  height: 550px;
-}
-
-#welcome h1, h4 {
-
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-
-.order {
-  margin: 0px 20px 0px 0px;
-
-}
-
-#greeting {
-  white-space: nowrap;
-  width: 560px;
-  background-color: rgba(0,0,0,0.7);
-  padding: 10px 0px 10px 15px;
-  border-radius: 5px;
-}
-
-/*.buttons {
-  white-space: nowrap;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 150px;
-  width: 100%;
-}*/
-
-.buttons button {
-  background-color: #d4bf5e;
-  border: 2px solid #796920;
-  font-family: leagueGothic, sans-serif;
-  font-size: 3.5em;
-
-}
-
-.buttons button:hover {
-  background-color: #b69d30;
-  border: 2px solid #796920;
-}
-
-#navbar-brand:hover {
-  color: black;
-
-}
-
-#navbar-brand {
-
-  font-family: 'Geo', sans-serif;
-  font-size: 2.5em;
-  margin-left: 10px;
-  color: #777;
-  text-decoration: none;
-
-}
-
-.navbar-right {
-
-  margin-right: 40px;
-
 }
 
 .sidebar-nav { 
@@ -101,61 +120,23 @@ body {
   background-color: #EEEEEE;
   border-radius: 3px;
   padding-left: 10px;
-  }
-
-.headline {
-  margin-top: 70px;
-  margin-left: 75px;
 }
 
-.headline, h1 {
-  font-size: 60px;
-  color: #00000F;
+#order-left-nav {
+  padding-bottom: 500em;
+  margin-bottom: -500em;
 }
 
-.order {
-  margin-top: 200px;
-  float: left;
-  margin-left: 25%;
+#order-right-nav {
+  padding-bottom: 500em;
+  margin-bottom: -500em;
 }
 
-.delivery {
-  margin-top: 200px;
-  float: right;
-  margin-right: 25%;
-}
 
-.btn-primary {
-  width: 200px;
-  height: 100px;
-  font-size: 35px;
-}
-
-.col-md-3 {
-  margin-top: 20px;
-}
-
-.img-thumbnail {
-  height: 220px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.5;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
-}
-
-.img-thumbnail:hover {
-  opacity: 1.0;
-}
+/*INDIVIDUAL ORDER STYLING*/
 
 #card {
   border: black solid 2.5px;
-}
-
-.food-icon {
-  border: black solid 2.5px;
-  width: 170px;
-  border-radius: 5px;
-  display: inline-block;
 }
 
 .card-data-right {
@@ -173,46 +154,75 @@ body {
   position: absolute;
 }
 
-/*Form styling*/
-
-.left-inner-addon {
-  position: relative;
+.delivery {
+  margin-top: 200px;
+  float: right;
+  margin-right: 25%;
 }
 
-.left-inner-addon input {
-    padding-left: 30px;    
-}
-.left-inner-addon i {
-    position: absolute;
-    padding: 10px 12px;
-    pointer-events: none;
+.food-icon {
+  border: black solid 2.5px;
+  width: 170px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
-.right-inner-addon {
-    position: relative;
+.img-thumbnail {
+  height: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
 }
 
-.right-inner-addon input {
-    padding-right: 30px;    
+.img-thumbnail:hover {
+  opacity: 1.0;
 }
 
-.right-inner-addon i {
-    position: absolute;
-    right: 0px;
-    padding: 10px 12px;
-    pointer-events: none;
+.order {
+  margin-top: 200px;
+  float: left;
+  margin-left: 25%;
 }
 
-.form-control {
-  margin-top:2em;
+.col-md-3 {
+  margin-top: 20px;
 }
 
-.glyphicon {
-  margin-right: 0.5em;
+/*FORM STYLING*/
+
+#aboutgreeting {
+  white-space: nowrap;
+  width: 300px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 0px 10px 15px;
+  border-radius: 5px;
+  margin-top: 265px;
 }
 
-.checkbox {
-  margin: 0.5em 0em 0em 0.5em;
+#about {
+  background: url(../img/fotorcreated.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+
+#about h1 {
+  color: white;
+}
+
+.accept {
+  position: absolute;
+}
+
+#accept {
+  margin-top: 15px;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.buttons.col-xs-4.col-xs-offset-4 {
+  margin-top: 5em;
 }
 
 .buttonHolder {
@@ -229,8 +239,24 @@ body {
   display: inline;
 }
 
+.btn-success {
+  border-radius: 3px;
+  font-size: 17px;
+  margin-top: 13px;
+  height: 30px;
+  width: 170px;
+}
+
 .btn-info:hover {
   background-color: #796920;
+}
+
+.checkbox {
+  margin: 0.5em 0em 0em 0.5em;
+}
+
+.form-control {
+  margin-top:2em;
 }
 
 #form_title {
@@ -240,78 +266,45 @@ body {
   text-align: center;
 }
 
-.accept {
+.glyphicon {
+  margin-right: 0.5em;
+}
+
+.left-inner-addon {
+  position: relative;
+}
+
+.left-inner-addon input {
+  padding-left: 30px;    
+}
+.left-inner-addon i {
   position: absolute;
+  padding: 10px 12px;
+  pointer-events: none;
 }
 
-#accept {
-  margin-top: 15px;
-  width: 170px;
-  height: 50px;
-  font-size: 20px;
+.right-inner-addon {
+  position: relative;
 }
 
-.arrow {
-  width: 60px;
-  margin: auto;
-  margin-top: -60px;
+.right-inner-addon input {
+  padding-right: 30px;    
 }
 
-.arrowimg {
-  width: 60px;
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
 }
 
+/*STAR RATING STYLING*/
 
-
-.buttons {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#left-button {
-  float: left;
-  margin-left: 300px;
-}
-
-#right-button {
-  float: right;
-  margin-right: 300px;
-}
-
-#about {
-  background: url(../img/fotorcreated.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 450px;
-}
-
-#about h1 {
-  color: white;
-}
-
-#aboutgreeting {
-    white-space: nowrap;
-    width: 300px;
-    background-color: rgba(0,0,0,0.7);
-    padding: 10px 0px 10px 15px;
-    border-radius: 5px;
-    margin-top: 265px;
-  }
-
-  .btn-success {
-    border-radius: 3px;
-    font-size: 17px;
-    margin-top: 13px;
-    height: 30px;
-    width: 170px;
-
-  }
-
-  .br-theme-fontawesome-stars .br-widget {
+.br-theme-fontawesome-stars.br-widget {
   height: 28px;
   white-space: nowrap;
 }
-.br-theme-fontawesome-stars .br-widget a {
+.br-theme-fontawesome-stars.br-widget a {
   font: normal normal normal 18px/1 FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -331,18 +324,6 @@ body {
 .br-theme-fontawesome-stars .br-widget .br-current-rating {
   display: none;
 }
-@media print {
-  .br-theme-fontawesome-stars .br-widget a:after {
-    content: '\f006';
-    color: black;
-  }
-  .br-theme-fontawesome-stars .br-widget a.br-active:after,
-  .br-theme-fontawesome-stars .br-widget a.br-selected:after {
-    content: '\f005';
-    color: black;
-  }
-}
-
 .br-theme-bootstrap-stars .br-widget {
   height: 28px;
   white-space: nowrap;
@@ -367,7 +348,21 @@ body {
 .br-theme-bootstrap-stars .br-widget .br-current-rating {
   display: none;
 }
+.br-theme-bootstrap-stars {
+  display: inline-block;
+}
 @media print {
+  .br-theme-fontawesome-stars .br-widget a:after {
+    content: '\f006';
+    color: black;
+  }
+  .br-theme-fontawesome-stars .br-widget a.br-active:after,
+  .br-theme-fontawesome-stars .br-widget a.br-selected:after {
+    content: '\f005';
+    color: black;
+  }
+}
+/*@media print {
   .br-theme-bootstrap-stars .br-widget a:after {
     content: '\e007';
     color: black;
@@ -377,8 +372,5 @@ body {
     content: '\e006';
     color: black;
   }
-}
+}*/
 
-.br-theme-bootstrap-stars {
-  display: inline-block;
-}
