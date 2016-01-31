@@ -30,7 +30,12 @@ end
 ####GETS######
 ##############
 get '/' do
-  @tagline = taglines
+  if session[:message]
+    @tagline = session[:message]
+    session.delete(:message)
+  else
+    @tagline = taglines
+  end
   erb :index
 end
 

@@ -402,3 +402,11 @@ body {
   }
 }*/
 
+.br-theme-bootstrap-stars {
+  display: inline-block;
+}
+
+#rate_button {
+  display: inline-block;
+}
+
