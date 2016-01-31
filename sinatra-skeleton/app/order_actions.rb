@@ -61,6 +61,5 @@ post '/orders/:order_id/rate' do
   @user = User.find(@order.deliverer_id)
   @user.rating = Order.where('deliverer_id = ?', @order.deliverer_id).average(:rating).to_i
   @user.save
-  binding.pry
   redirect :user
 end
