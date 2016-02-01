@@ -43,6 +43,11 @@ body {
   color: #00000F;
 }
 
+#signup {
+  text-align: center;
+  margin-bottom: 350px;
+}
+
 /*INDEX PAGE STYLING*/
 
 .arrow {
