@@ -32,7 +32,7 @@
             <ul style="list-style-type:none">
               <% @deliver_history.each do |delivery| %>
               <a href="/orders/<%= delivery.id %>" class="card_link"><span>
-                <li>Orderer: <%= @user.find(delivery.orderer_id).username %> <small><%= @user.find(delivery.deliverer_id).rating %><span class="glyphicon glyphicon-star" aria-hidden="true"></span></small></li>
+                <li>Orderer: <%= @user.find(delivery.orderer_id).username %> <small> Your rating <%= @user.find(delivery.deliverer_id).rating %><span class="glyphicon glyphicon-star" aria-hidden="true"></span></small></li>
                 <li>Cuisine: <%= delivery.cuisine %> <small>Price: <%= delivery.price %></small></li>
                 <li>Address: <%= delivery.destination %></li>
                 <br>
