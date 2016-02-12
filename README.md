@@ -17,10 +17,10 @@ Sign-in with
 
 username: Kendawgg password: 1234
 
-Feel free to contact me if you have any questions. 
+Feel free to contact Kenny, Sam, or Dennis if you have any questions. 
 
-wu.kenny1221@gmail.com
+Kenny: wu.kenny1221@gmail.com
 
-Cheers,
+Sam: samcoll@gmail.com
 
-Kenny
+Dennis: dennis@urbantherapy.ca
